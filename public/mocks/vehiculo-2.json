@@ -1,0 +1,25 @@
+{
+    "id": 2,
+    "marca": "Toyota",
+    "modelo": "Hilux",
+    "anio": 2019,
+    "motor": {
+        "tamaño": "3.0",
+        "marca": "Toyota",
+        "potencia": 170
+    },
+    "transmicion": "Automatica",
+    "dimensiones": {
+        "ancho": 190,
+        "largo": 530
+    },
+    "descripcion": "La Toyota Hilux es una camioneta todo terreno que combina durabilidad y versatilidad. Con un chasis resistente y una tracción 4x4, es capaz de enfrentarse a cualquier tipo de terreno. Ideal para trabajo pesado o aventuras off-road.",
+    "rodado": 18,
+    "estado": "usado",
+    "images": [
+        { "url": "#" },
+        { "url": "#" }
+    ],
+    "categoria_tipo": "Camioneta",
+    "precio": 35000
+}

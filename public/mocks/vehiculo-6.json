@@ -1,0 +1,25 @@
+{
+    "id": 6,
+    "marca": "Jeep",
+    "modelo": "Wrangler",
+    "anio": 2023,
+    "motor": {
+        "tamaño": "3.6",
+        "marca": "Jeep",
+        "potencia": 285
+    },
+    "transmicion": "Manual",
+    "dimensiones": {
+        "ancho": 190,
+        "largo": 450
+    },
+    "descripcion": "El Jeep Wrangler es un SUV icónico que representa la libertad y la aventura en su máxima expresión. Con tracción 4x4 y capacidades todoterreno incomparables, es el compañero perfecto para explorar terrenos difíciles y disfrutar del aire libre.",
+    "rodado": 20,
+    "estado": "nuevo",
+    "images": [
+        { "url": "#" },
+        { "url": "#" }
+    ],
+    "categoria_tipo": "SUV",
+    "precio": 45000
+}

@@ -1,0 +1,25 @@
+{
+    "id": 3,
+    "marca": "Chevrolet",
+    "modelo": "Spark",
+    "anio": 2021,
+    "motor": {
+        "tamaño": "1.2",
+        "marca": "Chevrolet",
+        "potencia": 85
+    },
+    "transmicion": "Automatica",
+    "dimensiones": {
+        "ancho": 165,
+        "largo": 370
+    },
+    "descripcion": "El Chevrolet Spark es un auto compacto y ágil, perfecto para la vida urbana. Con un diseño moderno y eficiente, ofrece un gran rendimiento en combustible y un amplio espacio interior. Ideal para moverse con estilo por la ciudad.",
+    "rodado": 15,
+    "estado": "nuevo",
+    "images": [
+        { "url": "#" },
+        { "url": "#" }
+    ],
+    "categoria_tipo": "Auto",
+    "precio": 20000
+}

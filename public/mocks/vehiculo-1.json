@@ -1,0 +1,25 @@
+{
+    "id": 1,
+    "marca": "Volvo",
+    "modelo": "FH",
+    "anio": 2020,
+    "motor": {
+        "tamaño": "13.0",
+        "marca": "Volvo",
+        "potencia": 500
+    },
+    "transmicion": "Manual",
+    "dimensiones": {
+        "ancho": 260,
+        "largo": 800
+    },
+    "descripcion": "El camión Volvo FH es conocido por su robustez y confiabilidad en el transporte de carga pesada. Con una potente motorización y una cabina diseñada para la comodidad del conductor, es una opción ideal para largas distancias y trabajos exigentes.",
+    "rodado": 22,
+    "estado": "usado",
+    "images": [
+        { "url": "#" },
+        { "url": "#" }
+    ],
+    "categoria_tipo": "Camión",
+    "precio": 60000
+}

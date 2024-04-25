@@ -1,0 +1,25 @@
+{
+    "id": 4,
+    "marca": "Mercedes-Benz",
+    "modelo": "O500",
+    "anio": 2018,
+    "motor": {
+        "tamaño": "12.0",
+        "marca": "Mercedes-Benz",
+        "potencia": 350
+    },
+    "transmicion": "Automatica",
+    "dimensiones": {
+        "ancho": 250,
+        "largo": 1200
+    },
+    "descripcion": "El colectivo Mercedes-Benz O500 es reconocido por su confort y seguridad en el transporte público. Con una construcción robusta y un interior espacioso, ofrece un viaje placentero y fiable para pasajeros de todas las edades.",
+    "rodado": 24,
+    "estado": "usado",
+    "images": [
+        { "url": "#" },
+        { "url": "#" }
+    ],
+    "categoria_tipo": "Colectivo",
+    "precio": 70000
+}

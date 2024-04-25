@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "marca": "Volvo",
+        "modelo": "FH",
+        "anio": 2020,
+        "estado": "usado",
+        "imagen": "#"
+    },
+    {
+        "id": 2,
+        "marca": "Toyota",
+        "modelo": "Hilux",
+        "anio": 2019,
+        "estado": "usado",
+        "imagen": "#"
+    },
+    {
+        "id": 3,
+        "marca": "Chevrolet",
+        "modelo": "Spark",
+        "anio": 2021,
+        "estado": "nuevo",
+        "imagen": "#"
+    },
+    {
+        "id": 4,
+        "marca": "Mercedes-Benz",
+        "modelo": "O500",
+        "anio": 2018,
+        "estado": "usado",
+        "imagen": "#"
+    },
+    {
+        "id": 5,
+        "marca": "Ford",
+        "modelo": "Transit",
+        "anio": 2022,
+        "estado": "nuevo",
+        "imagen": "#"
+    },
+    {
+        "id": 6,
+        "marca": "Jeep",
+        "modelo": "Wrangler",
+        "anio": 2023,
+        "estado": "nuevo",
+        "imagen": "#"
+    }
+]

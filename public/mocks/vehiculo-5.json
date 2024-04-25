@@ -1,0 +1,25 @@
+{
+    "id": 5,
+    "marca": "Ford",
+    "modelo": "Transit",
+    "anio": 2022,
+    "motor": {
+        "tamaño": "2.2",
+        "marca": "Ford",
+        "potencia": 120
+    },
+    "transmicion": "Manual",
+    "dimensiones": {
+        "ancho": 190,
+        "largo": 500
+    },
+    "descripcion": "La furgoneta Ford Transit es una opción popular para el transporte de carga o pasajeros. Con una gran capacidad de carga y una variedad de configuraciones disponibles, es una herramienta versátil para empresas o actividades recreativas.",
+    "rodado": 16,
+    "estado": "nuevo",
+    "images": [
+        { "url": "#" },
+        { "url": "#" }
+    ],
+    "categoria_tipo": "Furgoneta",
+    "precio": 30000
+}
