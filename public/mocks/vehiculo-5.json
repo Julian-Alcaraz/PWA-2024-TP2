@@ -1,25 +1,26 @@
 {
     "id": 5,
-    "marca": "Ford",
-    "modelo": "Transit",
+    "marca": "Renault",
+    "modelo": "Triber",
     "anio": 2022,
     "motor": {
-        "tamaño": "2.2",
-        "marca": "Ford",
-        "potencia": 120
+        "tamaño": "1.0",
+        "marca": "Renault",
+        "potencia": 72
     },
     "transmicion": "Manual",
     "dimensiones": {
-        "ancho": 190,
-        "largo": 500
+        "ancho": 173,
+        "largo": 399
     },
-    "descripcion": "La furgoneta Ford Transit es una opción popular para el transporte de carga o pasajeros. Con una gran capacidad de carga y una variedad de configuraciones disponibles, es una herramienta versátil para empresas o actividades recreativas.",
-    "rodado": 16,
+    "descripcion": "El Renault Triber es un vehículo compacto y versátil que combina un diseño moderno con funcionalidad y economía de combustible. Con capacidad para siete pasajeros y una amplia gama de características de conveniencia, es ideal para la vida urbana y los viajes familiares.",
+    "rodado": 14,
     "estado": "nuevo",
     "images": [
-        { "url": "#" },
-        { "url": "#" }
+        { "url": "/img/renault1.webp" },
+        { "url": "/img/renault2.webp" },
+        { "url": "/img/renault3.webp" }
     ],
-    "categoria_tipo": "Furgoneta",
-    "precio": 30000
+    "categoria_tipo": "MPV",
+    "precio": 18000
 }

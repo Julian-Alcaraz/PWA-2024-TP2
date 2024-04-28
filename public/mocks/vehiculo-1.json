@@ -1,25 +1,26 @@
 {
     "id": 1,
     "marca": "Volvo",
-    "modelo": "FH",
-    "anio": 2020,
+    "modelo": "XC90",
+    "anio": 2022,
     "motor": {
-        "tamaño": "13.0",
+        "tamaño": "2.0",
         "marca": "Volvo",
-        "potencia": 500
+        "potencia": 250
     },
-    "transmicion": "Manual",
+    "transmicion": "Automática",
     "dimensiones": {
-        "ancho": 260,
-        "largo": 800
+        "ancho": 200,
+        "largo": 495
     },
-    "descripcion": "El camión Volvo FH es conocido por su robustez y confiabilidad en el transporte de carga pesada. Con una potente motorización y una cabina diseñada para la comodidad del conductor, es una opción ideal para largas distancias y trabajos exigentes.",
-    "rodado": 22,
-    "estado": "usado",
+    "descripcion": "El Volvo XC90 es un SUV de lujo que combina elegancia, seguridad y rendimiento. Con un diseño distintivo y una amplia gama de características de seguridad avanzadas, ofrece una experiencia de conducción premium para toda la familia.",
+    "rodado": 20,
+    "estado": "nuevo",
     "images": [
-        { "url": "#" },
-        { "url": "#" }
+        { "url": "/img/volvo1.webp" },
+        { "url": "/img/volvo2.webp" },
+        { "url": "/img/volvo3.webp" }
     ],
-    "categoria_tipo": "Camión",
-    "precio": 60000
+    "categoria_tipo": "SUV",
+    "precio": 70000
 }

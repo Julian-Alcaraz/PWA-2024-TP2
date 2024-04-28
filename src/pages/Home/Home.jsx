@@ -21,7 +21,10 @@ const Home = () => {
     const searchVehiculos = () => {
         let arreglo = [];
         for(let i=0; i < vehiculosState.length; i++){
-            if (vehiculosState[i].marca.toLowerCase().includes(valueInput.toLowerCase())){
+            let marcaYmodelo = vehiculosState[i].marca.toLowerCase() + " " + vehiculosState[i].modelo.toLowerCase();
+            if (vehiculosState[i].marca.toLowerCase().includes(valueInput.toLowerCase()) 
+            || vehiculosState[i].modelo.toLowerCase().includes(valueInput.toLowerCase())
+            || marcaYmodelo.includes(valueInput.toLowerCase())){
                 arreglo.push(vehiculosState[i]);
             }
         }
@@ -29,32 +32,33 @@ const Home = () => {
     }
 
     useEffect(() => {
-        fetchVehiculos();
-        //console.log ("Se ejecuta useEffect");    
+        fetchVehiculos();   
     }, []);
 
     return (
-    <div>
-        <Header />
-        <div className="m-auto mb-12">
-            <div className="flex justify-center my-6 text-5xl">
-                <h1>Título</h1>
+        <div className="flex flex-col min-h-screen bg-slate-200">
+            <Header />
+            <div className="flex-grow">
+                <div className="flex flex-col items-center justify-center my-4">
+                    <h1 className="text-3xl mb-4"></h1>
+                    <Input value={valueInput} onChangeHandler={onChangeHandler} placeholder={"Buscar vehículo"} />
+                </div>
+                {
+                    valueInput.length > 0 ? (
+                        searchVehiculos().length > 0 ? (
+                            <ListaVehiculos vehiculos={searchVehiculos()} />
+                        ) : (
+                            <div className="flex justify-center p-4 mt-4">
+                                <h3 className="text-xl">No se encontraron vehículos para su búsqueda</h3>
+                            </div>
+                        )
+                    ) : (
+                        <ListaVehiculos vehiculos={vehiculosState} />
+                    )
+                    
+                }
             </div>
-            <div className="flex justify-center mb-6">
-                <Input value={valueInput} onChangeHandler={onChangeHandler} placeholder={"Buscar vehículo"}/>
-            </div>
-            {
-                searchVehiculos().length > 0 ? (
-                        <ListaVehiculos vehiculos={searchVehiculos()}/>
-                ) : (
-                    <div className="flex justify-center text-xl">
-                        <h3>No se encontraron vehículos para su búsqueda</h3>
-                    </div>
-                )
-            }
         </div>
-        <Footer />
-    </div>
     );
 };
 

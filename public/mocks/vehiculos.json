@@ -2,10 +2,11 @@
     {
         "id": 1,
         "marca": "Volvo",
-        "modelo": "FH",
-        "anio": 2020,
-        "estado": "usado",
-        "imagen": "#"
+        "modelo": "XC90",
+        "anio": 2022,
+        "estado": "nuevo",
+        "imagen": "/img/volvo1.webp",
+        "precio": 70000
     },
     {
         "id": 2,
@@ -13,38 +14,43 @@
         "modelo": "Hilux",
         "anio": 2019,
         "estado": "usado",
-        "imagen": "#"
+        "imagen": "/img/toyota1.webp",
+        "precio": 35000
     },
     {
         "id": 3,
-        "marca": "Chevrolet",
-        "modelo": "Spark",
+        "marca": "BMW",
+        "modelo": "X1",
         "anio": 2021,
         "estado": "nuevo",
-        "imagen": "#"
+        "imagen": "/img/bmw1.webp",
+        "precio": 55000
     },
     {
         "id": 4,
         "marca": "Mercedes-Benz",
-        "modelo": "O500",
-        "anio": 2018,
-        "estado": "usado",
-        "imagen": "#"
+        "modelo": "G-Class",
+        "anio": 2023,
+        "estado": "nuevo",
+        "imagen": "/img/mercedes1.webp",
+        "precio": 150000
     },
     {
         "id": 5,
-        "marca": "Ford",
-        "modelo": "Transit",
+        "marca": "Renault",
+        "modelo": "Triber",
         "anio": 2022,
         "estado": "nuevo",
-        "imagen": "#"
+        "imagen": "/img/renault1.webp",
+        "precio": 18000
     },
     {
         "id": 6,
-        "marca": "Jeep",
-        "modelo": "Wrangler",
+        "marca": "Audi",
+        "modelo": "A4",
         "anio": 2023,
         "estado": "nuevo",
-        "imagen": "#"
+        "imagen": "/img/audi1.webp",
+        "precio": 45000
     }
 ]

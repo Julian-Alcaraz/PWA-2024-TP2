@@ -1,25 +1,26 @@
 {
     "id": 3,
-    "marca": "Chevrolet",
-    "modelo": "Spark",
+    "marca": "BMW",
+    "modelo": "X1",
     "anio": 2021,
     "motor": {
-        "tamaño": "1.2",
-        "marca": "Chevrolet",
-        "potencia": 85
+        "tamaño": "2.0",
+        "marca": "BMW",
+        "potencia": 190
     },
-    "transmicion": "Automatica",
+    "transmicion": "Automática",
     "dimensiones": {
-        "ancho": 165,
-        "largo": 370
+        "ancho": 182,
+        "largo": 444
     },
-    "descripcion": "El Chevrolet Spark es un auto compacto y ágil, perfecto para la vida urbana. Con un diseño moderno y eficiente, ofrece un gran rendimiento en combustible y un amplio espacio interior. Ideal para moverse con estilo por la ciudad.",
-    "rodado": 15,
+    "descripcion": "El BMW X1 combina la versatilidad de un SUV compacto con el lujo y el estilo distintivo de la marca BMW. Equipado con tecnología avanzada y un potente motor, ofrece un rendimiento excepcional en todo tipo de condiciones de manejo.",
+    "rodado": 18,
     "estado": "nuevo",
     "images": [
-        { "url": "#" },
-        { "url": "#" }
+        { "url": "/img/bmw1.webp" },
+        { "url": "/img/bmw2.webp" },
+        { "url": "/img/bmw3.webp" }
     ],
-    "categoria_tipo": "Auto",
-    "precio": 20000
+    "categoria_tipo": "SUV",
+    "precio": 55000
 }

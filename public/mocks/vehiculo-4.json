@@ -1,25 +1,26 @@
 {
     "id": 4,
     "marca": "Mercedes-Benz",
-    "modelo": "O500",
-    "anio": 2018,
+    "modelo": "G-Class",
+    "anio": 2023,
     "motor": {
-        "tamaño": "12.0",
+        "tamaño": "4.0",
         "marca": "Mercedes-Benz",
-        "potencia": 350
+        "potencia": 577
     },
-    "transmicion": "Automatica",
+    "transmicion": "Automática",
     "dimensiones": {
-        "ancho": 250,
-        "largo": 1200
+        "ancho": 197,
+        "largo": 471
     },
-    "descripcion": "El colectivo Mercedes-Benz O500 es reconocido por su confort y seguridad en el transporte público. Con una construcción robusta y un interior espacioso, ofrece un viaje placentero y fiable para pasajeros de todas las edades.",
-    "rodado": 24,
-    "estado": "usado",
+    "descripcion": "La Mercedes-Benz G-Class es un icono de la industria automotriz, conocida por su diseño robusto, lujo incomparable y capacidades todoterreno excepcionales. Equipada con un potente motor y la última tecnología, ofrece una experiencia de conducción única.",
+    "rodado": 20,
+    "estado": "nuevo",
     "images": [
-        { "url": "#" },
-        { "url": "#" }
+        { "url": "/img/mercedes1.webp" },
+        { "url": "/img/mercedes2.webp" },
+        { "url": "/img/mercedes3.webp" }
     ],
-    "categoria_tipo": "Colectivo",
-    "precio": 70000
+    "categoria_tipo": "SUV",
+    "precio": 150000
 }
