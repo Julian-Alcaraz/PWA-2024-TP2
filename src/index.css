@@ -9,6 +9,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --tw-bg-opacity: 1; 
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+
+  
 }
 
 code {

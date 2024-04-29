@@ -36,7 +36,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="flex flex-col min-h-screen bg-slate-200">
+        <div className="flex flex-col min-h-screen ">
             <Header />
             <div className="flex-grow">
                 <div className="flex flex-col items-center justify-center my-4">

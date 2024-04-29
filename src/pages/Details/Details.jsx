@@ -22,14 +22,12 @@ export default function Details() {
       },[]);
 
     return (
-      <div className="Details">
-          <Header />
-        <div className='container mx-auto mt-3 border rounded-lg shadow-lg bg-slate-200'>
-         <div className='absolute  mt-4 ml-4'>
-            <button onClick={()=> navigate(ROUTES.home) } ><IoIosArrowBack /> </button> 
-         </div>
-       
-
+      <div className="Details ">
+        <Header />
+        <div className='container mx-auto mt-6  p-2 rounded-lg shadow-lg bg-slate-300'>
+          <div className='absolute  mt-4 ml-4'>
+             <button onClick={()=> navigate(ROUTES.home) } ><IoIosArrowBack /> </button> 
+          </div>
           {vehiculo.id ?  (
             <>
               <div className=' '>
