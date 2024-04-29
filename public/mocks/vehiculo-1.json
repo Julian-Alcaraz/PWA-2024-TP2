@@ -17,8 +17,10 @@
     "rodado": 22,
     "estado": "usado",
     "images": [
-        { "url": "#" },
-        { "url": "#" }
+        { "url": "/images/volvo-1.jpg" },
+        { "url": "/images/volvo-2.jpg" },
+        { "url": "/images/volvo-3.jpg" },
+        { "url": "/images/volvo-4.jpg" }
     ],
     "categoria_tipo": "Camión",
     "precio": 60000
