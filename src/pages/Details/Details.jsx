@@ -28,63 +28,75 @@ export default function Details() {
          <div className='absolute  mt-4 ml-4'>
             <button onClick={()=> navigate(ROUTES.home) } ><IoIosArrowBack /> </button> 
          </div>
+       
+
           {vehiculo.id ?  (
             <>
-              <div className='flex justify-center p-4  '>
-                <div className='images p-4 bg-white rounded-xl  shadow-lg' >
-                  <div>
-                    <img width="180" height="180" src={selectedImage==="" ? vehiculo.images[0].url : selectedImage} alt="" />
+              <div className=' '>
+                <div class="w-full flex justify-center space-x-10 mt-5">
+                  <div class="flex flex-col w-1/3 my-auto">
+                    <div class="w-full rounded border border-gray-200">
+                       <img alt="ecommerce" class="w-full object-cover object-center"src={selectedImage==="" ? vehiculo.images[0].url : selectedImage}/> 
+                    </div>
+                    <div class="flex items-center justify-center mt-1">
+                      <div class="grid grid-cols-3 gap-1">
+                        {vehiculo.images.map( (image,key)=>{
+                          return (
+                            <div className=''    key={key}>
+                              <button onClick={()=> setSelectedImage(image.url)} className={selectedImage === image.url ? 'border-2 rounded  border-gray-900 ' : ''  }>
+                                <div>
+                                  <img src={image.url} alt="" />
+                                </div>
+                              </button>
+                            </div>
+                          )
+                        })} 
+                      </div>
+                    </div>
                   </div>
-                  <div className='flex w-44  overflow-x-scroll  '>
-                    {vehiculo.images.map( (image,key)=>{
-                      return (
-                        <div className='p-0.5 '  key={key}>
-                          <button onClick={()=> setSelectedImage(image.url)} className={selectedImage === image.url ? 'border  border-cyan-700 overflow-hidden' : 'overflow-hidden'  }>
-                            <img width="100" height="80"src={image.url} alt="" />
-                          </button>
-                        </div>
-                      )
-                    })}
-                  </div>
-                </div>
-                <div className='DatosPrincipales   p-4 '>
-                  <h1 className='text-center underline text-xl font-bold text-gray-800'>Datos Principales</h1>
-                  <div className=' grid  grid-cols-2 text-center text-sm my-3'>
-                    <div className='font-bold'>Marca:</div> 
-                    <div>{vehiculo.marca ? vehiculo.marca : '---'}</div>
-                    <div className='font-bold'>Modelo:</div> 
-                    <div>{vehiculo.modelo ? vehiculo.modelo : '---'}</div>
-                    <div className='font-bold'>Año:</div> 
-                    <div>{vehiculo.anio ? vehiculo.anio : '---'}</div>
-                    <div className='font-bold'>Estado:</div> 
-                    <div>{vehiculo.estado ? vehiculo.estado : '---'}</div>
-                    <div className='font-bold'>Categoría/Tipo:</div> 
-                    <div>{vehiculo.categoria_tipo ? vehiculo.categoria_tipo : '---'}</div>
-                    <div className='font-bold'>Precio:</div> 
-                    <div>{vehiculo.precio ? vehiculo.precio : '---'}</div>
-                  </div>
-                </div>
-              </div>
-              <div className='border-t'>
+                  <div className='DatosPrincipales  m-auto '>
+                    <h1 className='text-center underline text-xl font-bold text-gray-800'>Datos Principales</h1>
+                    <div className=' grid  grid-cols-4 text-sm my-3'>
+                      <div className='font-bold'>Marca:</div> 
+                      <div className='text-center '>{vehiculo.marca ? vehiculo.marca : '---'}</div>
+                      <div className='font-bold'>Modelo:</div> 
+                      <div className='text-center '>{vehiculo.modelo ? vehiculo.modelo : '---'}</div>
+                      <div className='font-bold'>Año:</div> 
+                      <div className='text-center '>{vehiculo.anio ? vehiculo.anio : '---'}</div>
+                      <div className='font-bold'>Estado:</div> 
+                      <div className='text-center '>{vehiculo.estado ? vehiculo.estado : '---'}</div>
+                      <div className='font-bold'>Categoría/Tipo:</div> 
+                      <div className='text-center '>{vehiculo.categoria_tipo ? vehiculo.categoria_tipo : '---'}</div>
+                      <div className='font-bold'>Precio:</div> 
+                      <div className='text-center '>{vehiculo.precio ? vehiculo.precio : '---'}</div>
+                    </div>
+                  <div className='border-t border-black'>
                 <h1 className='text-center underline text-xl font-bold text-gray-800'>Especificiaciones t&eacute;cnicas</h1>
                   <div className=' grid  grid-cols-2  text-sm my-3 gap-1'>
-                    <div className='font-bold   ml-40 '>Tamaño del motor:</div> 
-                    <div className='text-center mr-32  '>{vehiculo.motor.tamaño ? vehiculo.motor.tamaño : '---'}</div>
-                    <div className='font-bold  ml-40   ' >Marca del motor:</div> 
-                    <div className='text-center mr-32'>{vehiculo.motor.marca ? vehiculo.motor.marca : '---'}</div>
-                    <div className='font-bold  ml-40'>Potencia del motor:</div> 
-                    <div className='text-center mr-32'>{vehiculo.motor.potencia ? vehiculo.motor.potencia : '---'}</div>
-                    <div className='font-bold  ml-40'>Transmicion:</div> 
-                    <div className='text-center mr-32'>{vehiculo.transmicion ? vehiculo.transmicion : '---'}</div>
-                    <div className='font-bold  ml-40'>Ancho:</div> 
-                    <div className='text-center mr-32'>{vehiculo.dimensiones.ancho ? vehiculo.dimensiones.ancho : '---'}</div>
-                    <div className='font-bold  ml-40' >Largo:</div> 
-                    <div className='text-center mr-32'>{vehiculo.dimensiones.largo ? vehiculo.dimensiones.largo : '---'}</div>
-                    <div className='font-bold  ml-40' >Rodado:</div> 
-                    <div className='text-center mr-32'>{vehiculo.rodado ? vehiculo.rodado : '---'}</div>
+                    <div className='font-bold   '>Tamaño del motor:</div> 
+                    <div className='text-center '>{vehiculo.motor.tamaño ? vehiculo.motor.tamaño : '---'}</div>
+                    <div className='font-bold   '>Marca del motor:</div> 
+                    <div className='text-center '>{vehiculo.motor.marca ? vehiculo.motor.marca : '---'}</div>
+                    <div className='font-bold   '>Potencia del motor:</div> 
+                    <div className='text-center '>{vehiculo.motor.potencia ? vehiculo.motor.potencia : '---'}</div>
+                    <div className='font-bold   '>Transmicion:</div> 
+                    <div className='text-center '>{vehiculo.transmicion ? vehiculo.transmicion : '---'}</div>
+                    <div className='font-bold   '>Ancho:</div> 
+                    <div className='text-center '>{vehiculo.dimensiones.ancho ? vehiculo.dimensiones.ancho : '---'}</div>
+                    <div className='font-bold   '>Largo:</div> 
+                    <div className='text-center '>{vehiculo.dimensiones.largo ? vehiculo.dimensiones.largo : '---'}</div>
+                    <div className='font-bold   ' >Rodado:</div> 
+                    <div className='text-center '>{vehiculo.rodado ? vehiculo.rodado : '---'}</div>
+                  </div>
+              </div>
+                  
+                  
+                  </div>
+               
+         
                 </div>
                 <h1 className='text-center underline text-xl font-bold text-gray-800'>Descripci&oacute;n</h1>
-                  <div className='text-center mx-16 my-3'>{vehiculo.descripcion ? vehiculo.descripcion : '---'}</div>
+                <div className='text-center mx-16 my-3'>{vehiculo.descripcion ? vehiculo.descripcion : '---'}</div>
               </div>
           
           </>
