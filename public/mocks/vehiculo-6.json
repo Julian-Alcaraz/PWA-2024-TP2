@@ -1,25 +1,26 @@
 {
     "id": 6,
-    "marca": "Jeep",
-    "modelo": "Wrangler",
+    "marca": "Audi",
+    "modelo": "A4",
     "anio": 2023,
     "motor": {
-        "tamaño": "3.6",
-        "marca": "Jeep",
-        "potencia": 285
+        "tamaño": "2.0",
+        "marca": "Audi",
+        "potencia": 248
     },
-    "transmicion": "Manual",
+    "transmicion": "Automática",
     "dimensiones": {
-        "ancho": 190,
-        "largo": 450
+        "ancho": 184,
+        "largo": 476
     },
-    "descripcion": "El Jeep Wrangler es un SUV icónico que representa la libertad y la aventura en su máxima expresión. Con tracción 4x4 y capacidades todoterreno incomparables, es el compañero perfecto para explorar terrenos difíciles y disfrutar del aire libre.",
-    "rodado": 20,
+    "descripcion": "El Audi A4 es un sedán de lujo que combina un diseño elegante con un rendimiento excepcional. Equipado con un potente motor y características de seguridad avanzadas, ofrece una experiencia de conducción refinada y confortable.",
+    "rodado": 17,
     "estado": "nuevo",
     "images": [
-        { "url": "#" },
-        { "url": "#" }
+        { "url": "/img/audi1.webp" },
+        { "url": "/img/audi2.webp" },
+        { "url": "/img/audi3.webp" }
     ],
-    "categoria_tipo": "SUV",
+    "categoria_tipo": "Sedán",
     "precio": 45000
 }

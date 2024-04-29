@@ -7,7 +7,9 @@ const Header = () => {
     return (
         <div className="Header">
             <nav className="bg-gray-800 p-4">   
-                <button  onClick={() => {navigate(ROUTES.home);}} className="text-white text-xl font-bold ">Logo</button>
+                <button  onClick={() => {navigate(ROUTES.home);}} className="text-white text-xl font-bold ">
+                    Logo
+                </button>
             </nav>
         </div>
     );

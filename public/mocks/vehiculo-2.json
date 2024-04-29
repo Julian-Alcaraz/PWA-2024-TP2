@@ -17,8 +17,9 @@
     "rodado": 18,
     "estado": "usado",
     "images": [
-        { "url": "#" },
-        { "url": "#" }
+        { "url": "/img/toyota1.webp" },
+        { "url": "/img/toyota2.webp" },
+        { "url": "/img/toyota3.webp" }
     ],
     "categoria_tipo": "Camioneta",
     "precio": 35000
