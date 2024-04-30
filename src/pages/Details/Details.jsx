@@ -31,13 +31,13 @@ export default function Details() {
           {vehiculo.id ?  (
             <>
               <div className=' '>
-                <div class="w-full flex justify-center space-x-10 mt-5">
-                  <div class="flex flex-col w-1/3 my-auto">
-                    <div class="w-full rounded border border-gray-200">
-                       <img alt="ecommerce" class="w-full object-cover object-center"src={selectedImage==="" ? vehiculo.images[0].url : selectedImage}/> 
+                <div className="w-full flex justify-center space-x-10 mt-5">
+                  <div className="flex flex-col w-1/3 my-auto">
+                    <div className="w-full rounded border border-gray-200">
+                       <img alt="ecommerce" className="w-full object-cover object-center"src={selectedImage==="" ? vehiculo.images[0].url : selectedImage}/> 
                     </div>
-                    <div class="flex items-center justify-center mt-1">
-                      <div class="grid grid-cols-3 gap-1">
+                    <div className="flex items-center justify-center mt-1">
+                      <div className="grid grid-cols-3 gap-1">
                         {vehiculo.images.map( (image,key)=>{
                           return (
                             <div className=''    key={key}>

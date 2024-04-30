@@ -8,16 +8,19 @@ const Home = () => {
     const [valueInput, setValueInput] = useState("");
     const [vehiculosState, setVehiculosState] = useState([]);
 
+    // Función que setea el valor del buscador al presionar teclas.
     const onChangeHandler = (event) => {
         setValueInput(event.target.value);
     };
 
+    // Función que obtiene los datos de vehiculos a partir de un archivo .json, y actualiza el estado de los vehiculos.
     const fetchVehiculos = async () => {
         const response = await fetch("/mocks/vehiculos.json");
         const result = await response.json();
         setVehiculosState(result);
     }
 
+    // Función que permite la búsqueda de vehiculos, ya sea por su marca, modelo, o ambos a la vez.
     const searchVehiculos = () => {
         let arreglo = [];
         for(let i=0; i < vehiculosState.length; i++){
@@ -40,7 +43,6 @@ const Home = () => {
             <Header />
             <div className="flex-grow">
                 <div className="flex flex-col items-center justify-center my-4">
-                    {/* <h1 className="text-3xl mb-4"></h1> */}
                     <Input value={valueInput} onChangeHandler={onChangeHandler} placeholder={"Buscar vehículo"} />
                 </div>
                 {
