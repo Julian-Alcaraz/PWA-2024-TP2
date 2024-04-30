@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# PWA-2024 TP-2 React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## :car: Descripción de la aplicación
 
-## Available Scripts
+  La aplicación desarrollada muestra una lista de vehículos precargada, en la cual al hacer click en algún elemento (vehículo),
+  se redirige al usuario a otra pantalla donde se visualizan los detalles de dicho vehículo.
 
-In the project directory, you can run:
+  En la página Home habrá un buscador que le permita al usuario visualizar los vehículos según la marca y modelo ingresados.
 
-### `npm start`
+  Además, en ambas páginas habrá un botón en el header que permite volver a la página de inicio cuando el usuario lo presione.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## :mortar_board: Cursada 2024
 
-### `npm test`
+- Universidad Nacional del Comahue
+- Facultad de Informatica (FAI)
+- Tecnicatura Universitaria en Desarrollo Web
+- Programación Web Avanzada (PWA)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :student: Alumnos - Grupo 1
 
-### `npm run build`
+- **Alcaraz Julian Jorge**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - Legajo FAI - 4261
+  - Mail Personal: julian.alcaraz@est.fi.uncoma.edu.ar
+  - Usuario GitHub: Julian-Alcaraz
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Agüero Mendez Guillermo Andres**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - Legajo FAI - 3844
+  - Mail Personal: guillermo.aguero@est.fi.uncoma.edu.ar
+  - Usuario GitHub: guillermoagueronqn
 
-### `npm run eject`
+## :wrench: :gear: Instrucciones para la instalación y uso de la aplicación
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ **1.** En caso de no tener instalado Node.js, se deberá hacerlo desde el siguiente link: https://nodejs.org/en/download , en el cual
+  se debe elegir el sistema operativo y luego seguir el proceso de instalación.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ **2.** Luego de haber instalado Node.js se deben escribir los comandos `node -v` y `npm -v` para saber si fue instalado correctamente. Lo que se muestra en consola son las versiones instaladas. En caso de que no se muestren las versiones, quiere decir que todavía no se han instalado correctamente.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![Paso 2](/public/img/paso2.png)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ **3.** Copiar la url del repositorio de GitHub.
 
-## Learn More
+![Paso 3](/public/img/paso3.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ **4.** Abrir en el editor de código usado la carpeta donde se querrá guardar el proyecto.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Paso 4](/public/img/paso4.png)
 
-### Code Splitting
+ **5.** En la terminal, clonar el proyecto usando la url. Esto se realiza con el comando `git clone url`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Paso 5](/public/img/paso5.png)
 
-### Analyzing the Bundle Size
+ **6.** Luego se deberá posicionar en la carpeta del proyecto clonado con el comando `cd PWA-2024-TP2` (en este caso ya que se llama así el proyecto). Una vez dentro de la carpeta, se ejecutará el comando `npm install`, el cual sirve para instalar todas las dependencias del proyecto.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Paso 6](/public/img/paso6.png)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ **7.** Por último, para iniciar el proyecto ejecutamos el comando `npm start`, con el cual se podrá empezar a utilizar el programa.
