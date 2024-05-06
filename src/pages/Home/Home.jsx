@@ -3,6 +3,7 @@ import Footer from "../../components/Footer/Footer";
 import Input from "../../components/Input/Input";
 import ListaVehiculos from "../../components/ListaVehiculos/ListaVehiculos";
 import { useState, useEffect } from "react";
+import DownloadButton from "../../components/DownloadButton/DownloadButton";
 const Home = () => {
 
     const [valueInput, setValueInput] = useState("");
@@ -42,8 +43,11 @@ const Home = () => {
         <div className="flex flex-col min-h-screen ">
             <Header />
             <div className="flex-grow">
-                <div className="flex flex-col items-center justify-center my-4">
-                    <Input value={valueInput} onChangeHandler={onChangeHandler} placeholder={"Buscar vehículo"} />
+                <div className="flex flex-row items-center justify-center  my-4">
+                        <Input value={valueInput} onChangeHandler={onChangeHandler} placeholder={"Buscar vehículo"} />
+                    <div className=" absolute end-10">
+                        <DownloadButton />
+                    </div>
                 </div>
                 {
                     valueInput.length > 0 ? (
