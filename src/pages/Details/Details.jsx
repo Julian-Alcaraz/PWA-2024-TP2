@@ -12,17 +12,17 @@ export default function Details() {
   const [vehiculo, setVehiculo] = useState([]);
   const [selectedImage, setSelectedImage] = useState("");
 
+  // Se convierte el string pasado por parametro a número, para luego comprobar ciertas condiciones en el useEffect()
+  const idNumero = Number(id);
+
   // Función que obtiene los datos de un vehículo a partir de un archivo .json, y actualiza el estado del vehículo.
   const fetchAuto = async () => {
-    const response = await fetch(`/mocks/vehiculo-${id}.json`);
+    const response = await fetch(`/mocks/vehiculo-${idNumero}.json`);
     const result = await response.json();
     setVehiculo(result);
     setSelectedImage(result.images[0].url)
   };
 
-  // Se convierte el string pasado por parametro a número, para luego comprobar ciertas condiciones en el useEffect()
-  const idNumero = Number(id);
-  
   useEffect(() => {
     // se comprueba que el id pasado por parametro sea entero entre 1 y 6, que en este caso son los archivos .json disponibles.
     if (idNumero > 0 && idNumero <= 6 && Number.isInteger(idNumero)){
@@ -78,7 +78,7 @@ export default function Details() {
                     <div className='text-center '>{vehiculo.precio ? vehiculo.precio : '---'}</div>
                   </div>
                   <div className='border-t border-black'>
-                    <h1 className='text-center underline text-xl font-bold text-gray-800'>Especificiaciones t&eacute;cnicas</h1>
+                    <h1 className='text-center underline text-xl font-bold text-gray-800'>Especificaciones t&eacute;cnicas</h1>
                     <div className=' grid  grid-cols-2  text-sm my-3 gap-1'>
                       <div className='font-bold   '>Tamaño del motor:</div> 
                       <div className='text-center '>{vehiculo.motor.tamaño ? vehiculo.motor.tamaño : '---'}</div>
