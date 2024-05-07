@@ -10,6 +10,12 @@
   Además, en ambas páginas habrá un botón en el header que permite volver a la página de inicio cuando el usuario lo presione.
 
 
+  Página de inicio
+![Página de Inicio](/public/img/appVehiculos1.png)
+
+  Página de detalles
+![Paso 2](/public/img/appVehiculos2.png)
+
 ## :mortar_board: Cursada 2024
 
 - Universidad Nacional del Comahue
@@ -57,3 +63,5 @@
 ![Paso 6](/public/img/paso6.png)
 
  **7.** Por último, para iniciar el proyecto ejecutamos el comando `npm start`, con el cual se podrá empezar a utilizar el programa.
+ Al completar este último paso, se debería poder visualizar en el navegador la primera imagen mostrada debajo de la descripción de la 
+ aplicación.
