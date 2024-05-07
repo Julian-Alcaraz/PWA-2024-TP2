@@ -20,9 +20,12 @@ export default function Details() {
     setSelectedImage(result.images[0].url)
   };
 
+  // Se convierte el string pasado por parametro a número, para luego comprobar ciertas condiciones en el useEffect()
+  const idNumero = Number(id);
+  
   useEffect(() => {
-    // se comprueba que el id pasado por parametro sea entre 1 y 6, que en este caso son los archivos .json disponibles.
-    if (id > 0 && id <= 6){
+    // se comprueba que el id pasado por parametro sea entero entre 1 y 6, que en este caso son los archivos .json disponibles.
+    if (idNumero > 0 && idNumero <= 6 && Number.isInteger(idNumero)){
       fetchAuto();
     }
   },[]);
