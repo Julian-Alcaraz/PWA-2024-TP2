@@ -1,11 +1,8 @@
 import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 import Input from "../../components/Input/Input";
 import ListaVehiculos from "../../components/ListaVehiculos/ListaVehiculos";
 import { useState, useEffect } from "react";
-import DownloadButton from "../../components/DownloadButton/DownloadButton";
 const Home = () => {
-
     const [valueInput, setValueInput] = useState("");
     const [vehiculosState, setVehiculosState] = useState([]);
 
@@ -44,10 +41,7 @@ const Home = () => {
             <Header />
             <div className="flex-grow">
                 <div className="flex flex-row items-center justify-center  my-4">
-                        <Input value={valueInput} onChangeHandler={onChangeHandler} placeholder={"Buscar vehículo"} />
-                    <div className=" absolute end-10">
-                        <DownloadButton />
-                    </div>
+                    <Input value={valueInput} onChangeHandler={onChangeHandler} placeholder={"Buscar vehículo"} />
                 </div>
                 {
                     valueInput.length > 0 ? (
@@ -61,11 +55,9 @@ const Home = () => {
                     ) : (
                         <ListaVehiculos vehiculos={vehiculosState} />
                     )
-                    
                 }
             </div>
         </div>
-
     );
 };
 

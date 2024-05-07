@@ -1,69 +1,62 @@
 import { FaFileDownload } from "react-icons/fa";
-import jsPDF  from "jspdf";
-// import jsPDF from "jspdf";
-const DownloadButton = () => {
-    async function generarPdf(){
-        const response = await fetch("/mocks/vehiculos.json");
-        const vehiculos = await response.json();
+import jsPDF from "jspdf";
+
+const DownloadButton = ({ vehiculo }) => {
+    function generarPdf() {
         const doc = new jsPDF();
-    
-        // Estilo para el título del listado
+
+        // Se establece el color de fondo del PDF
+        doc.setFillColor(203, 213, 255);
+        doc.rect(0, 0, doc.internal.pageSize.getWidth(), doc.internal.pageSize.getHeight(), 'F');
+
+        // Se establecen los estilos del texto del PDF
+        const textColor = [44, 62, 80];
+        const fontSize = 12;
+
+        // Función para dibujar una imagen en el PDF
+        function drawImage(img, x, y, width, height) {
+            doc.addImage(img, 'JPEG', x, y, width, height);
+        }
+
+        // Función para dibujar la información del vehículo
+        function drawVehicleInfo() {
+            doc.setFontSize(fontSize);
+            doc.setTextColor(...textColor);
+            // Parte de datos principales
+            doc.text(`Año: ${vehiculo.anio ? vehiculo.anio : '---'}`, 10, 160);
+            doc.text(`Estado: ${vehiculo.estado ? vehiculo.estado : '---'}`, doc.internal.pageSize.getWidth() - 10, 160, null, null, 'right');
+            doc.text(`Categoría/Tipo: ${vehiculo.categoria_tipo ? vehiculo.categoria_tipo : '---'}`, 10, 190);
+            doc.text(`Precio: ${vehiculo.precio ? vehiculo.precio : '---'}`, doc.internal.pageSize.getWidth() - 10, 190, null, null, 'right');
+            // Parte de especificaciones técnicas
+            doc.setFontSize(14);
+            doc.setTextColor(100);
+            doc.text("Especificaciones técnicas", doc.internal.pageSize.getWidth() / 2, 220, null, null, 'center');
+            doc.setFontSize(fontSize);
+            doc.setTextColor(...textColor);
+            doc.text(`Tamaño del motor: ${vehiculo.motor.tamaño ? vehiculo.motor.tamaño : '---'}`, 10, 240);
+            doc.text(`Marca del motor: ${vehiculo.motor.marca ? vehiculo.motor.marca : '---'}`, 10, 250);
+            doc.text(`Potencia del motor: ${vehiculo.motor.potencia ? vehiculo.motor.potencia : '---'}`, 10, 260);
+            doc.text(`Transmicion: ${vehiculo.transmicion ? vehiculo.transmicion : '---'}`, 10, 270);
+            doc.text(`Ancho: ${vehiculo.dimensiones.ancho ? vehiculo.dimensiones.ancho : '---'}`, 10, 280);
+            doc.text(`Largo: ${vehiculo.dimensiones.largo ? vehiculo.dimensiones.largo : '---'}`, 10, 290);
+            doc.text(`Rodado: ${vehiculo.rodado ? vehiculo.rodado : '---'}`, 10, 300);
+        }
+
+        // Se llaman a las funciones especificadas arriba para dibujar los elementos en el PDF
         doc.setFontSize(18);
-        doc.setTextColor(100);
-        doc.text("Listado de vehículos", 10, 10);
-    
-        // Variables para la posición de la tabla
-        let startX = 10;
-        let startY = 20;
-        let rowHeight = 10;
-        let idWidth = 10;
-        let colWidth = 30; // Modifiqué el ancho de las otras columnas
-    
-        // Estilo para la tabla
-        doc.setDrawColor(0);
-        doc.setFontSize(10); // Tamaño de fuente para los datos de la tabla
-        doc.setTextColor(0); 
-        doc.setFillColor(200, 200, 200)
-        doc.rect(startX, startY, idWidth, rowHeight,'S');
-        doc.text("Id", startX + 2, startY + 7);
-        doc.rect(startX + idWidth, startY, colWidth, rowHeight,'S');
-        doc.text("Marca", startX + idWidth + 2, startY + 7);
-        doc.rect(startX + idWidth + colWidth, startY, colWidth, rowHeight,'S');
-        doc.text("Modelo", startX + idWidth + colWidth + 2, startY + 7);
-        doc.rect(startX + idWidth + 2 * colWidth, startY, colWidth, rowHeight,'S');
-        doc.text("Año", startX + idWidth + 2 * colWidth + 2, startY + 7);
-        doc.rect(startX + idWidth + 3 * colWidth, startY, colWidth, rowHeight,'S');
-        doc.text("Estado", startX + idWidth + 3 * colWidth + 2, startY + 7);
-        doc.rect(startX + idWidth + 4 * colWidth, startY, colWidth, rowHeight,'S');
-        doc.text("Precio", startX + idWidth + 4 * colWidth + 2, startY + 7);
-        vehiculos.forEach((vehiculo, index) => {
-            const { id, marca, modelo, anio, estado, precio } = vehiculo;
-    
-            // Establecer colores alternados para las filas
-            // Dibujar celdas
-            startY += rowHeight;
-            doc.rect(startX, startY, idWidth, rowHeight);
-            doc.text(id.toString(), startX + 2, startY + 7);
-            doc.rect(startX + idWidth, startY, colWidth, rowHeight);
-            doc.text(marca, startX + idWidth + 2, startY + 7);
-            doc.rect(startX + idWidth + colWidth, startY, colWidth, rowHeight);
-            doc.text(modelo, startX + idWidth + colWidth + 2, startY + 7);
-            doc.rect(startX + idWidth + 2 * colWidth, startY, colWidth, rowHeight);
-            doc.text(anio.toString(), startX + idWidth + 2 * colWidth + 2, startY + 7);
-            doc.rect(startX + idWidth + 3 * colWidth, startY, colWidth, rowHeight);
-            doc.text(estado, startX + idWidth + 3 * colWidth + 2, startY + 7);
-            doc.rect(startX + idWidth + 4 * colWidth, startY, colWidth, rowHeight);
-            doc.text(precio.toString(), startX + idWidth + 4 * colWidth + 2, startY + 7);
-        });
-        // Guardar el PDF con el nombre especificado
-        doc.save("listado_vehiculos.pdf");
-   
+        doc.setTextColor(...textColor);
+        doc.text(`${vehiculo.marca} ${vehiculo.modelo}`, doc.internal.pageSize.getWidth() / 2, 20, null, null, 'center');
+        drawImage(vehiculo.images[0].url, 10, 30, 180, 120);
+        drawVehicleInfo();
+
+        // Guardar el PDF con el nombre de la marca y modelo del vehiculo
+        doc.save(`${vehiculo.marca}${vehiculo.modelo}.pdf`);
     }
-  
+
     return (
-       <div className="DownloadButton ">
-            <button className="p-4 border  rounded-xl  bg-gray-800 " onClick={()=> generarPdf()} ><FaFileDownload className="text-white" /></button>
-       </div>
+        <div className="DownloadButton">
+            <button className="p-4 border rounded-xl bg-gray-800" onClick={generarPdf}><FaFileDownload className="text-white" /></button>
+        </div>
     );
 };
 
