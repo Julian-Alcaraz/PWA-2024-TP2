@@ -1,21 +1,5 @@
 # PWA-2024 TP-2 React
 
-## :car: Descripción de la aplicación
-
-  La aplicación desarrollada muestra una lista de vehículos precargada, en la cual al hacer click en algún elemento (vehículo),
-  se redirige al usuario a otra pantalla donde se visualizan los detalles de dicho vehículo.
-
-  En la página Home habrá un buscador que le permita al usuario visualizar los vehículos según la marca y modelo ingresados.
-
-  Además, en ambas páginas habrá un botón en el header que permite volver a la página de inicio cuando el usuario lo presione.
-
-
-  Página de inicio
-![Página de Inicio](/public/img/appVehiculos1.png)
-
-  Página de detalles
-![Paso 2](/public/img/appVehiculos2.png)
-
 ## :mortar_board: Cursada 2024
 
 - Universidad Nacional del Comahue
@@ -36,6 +20,22 @@
   - Legajo FAI - 3844
   - Mail Personal: guillermo.aguero@est.fi.uncoma.edu.ar
   - Usuario GitHub: guillermoagueronqn
+
+## :car: Descripción de la aplicación
+
+  La aplicación desarrollada muestra una lista de vehículos precargada, en la cual al hacer click en algún elemento (vehículo),
+  se redirige al usuario a otra pantalla donde se visualizan los detalles de dicho vehículo.
+
+  En la página Home habrá un buscador que le permita al usuario visualizar los vehículos según la marca y modelo ingresados.
+
+  Además, en ambas páginas habrá un botón en el header que permite volver a la página de inicio cuando el usuario lo presione.
+
+
+  Página de inicio
+![Página de Inicio](/public/img/appVehiculos1.png)
+
+  Página de detalles
+![Paso 2](/public/img/appVehiculos2.png)
 
 ## :wrench: :gear: Instrucciones para la instalación y uso de la aplicación
 
